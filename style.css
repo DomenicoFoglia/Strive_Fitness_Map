@@ -70,8 +70,8 @@ a:visited {
 
 .workout {
   background-color: var(--color-dark--2);
-  border-radius: 15px;
-  padding: 2rem 2.25rem;
+  border-radius: 1.5rem;
+  padding: 2rem 2.25rem 2rem 12rem;
   margin-bottom: 1.75rem;
   cursor: pointer;
 
@@ -81,11 +81,41 @@ a:visited {
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
   will-change: transform, box-shadow;
 }
-.workout--running {
-  border-left: 100px solid var(--color-brand--2);
+
+
+.workout--running, .workout--cycling {
+  position: relative; 
+  overflow: hidden;
 }
-.workout--cycling {
-  border-left: 100px solid var(--color-brand--1);
+
+/* Fascia e immagine a sinistra per Running */
+.workout--running::before {
+  content: "";
+  position: absolute;
+  /* top: -1rem; */
+  left: 0;
+  width: 10rem; 
+  height: calc(100% + 4rem);
+  background-color: var(--color-brand--2);
+  background-image: url('/training.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 18rem; 
+}
+
+/* Fascia e immagine a sinistra per Cycling */
+.workout--cycling::before {
+  content: "";
+  position: absolute;
+  /* top: -2rem; */
+  left: 0;
+  width: 10rem;
+  height: calc(100% + 4rem);
+  background-color: var(--color-brand--1);
+  background-image: url('/cycling.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 18rem;
 }
 
 .workout__title {
@@ -131,6 +161,19 @@ a:visited {
   transform: scale(0.97);
   box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
 }
+
+/* .workout--running {
+  border-left: 100px solid var(--color-brand--2);
+  background-image: url('/training.png' );
+  background-size: 20.0rem ;
+  background-repeat: no-repeat;
+}
+.workout--cycling {
+  border-left: 100px solid var(--color-brand--1);
+  background-image: url('/cycling.png');
+  background-size: 20.0rem ;
+  background-repeat: no-repeat;
+} */
 
 .form {
   background-color: var(--color-dark--2);
