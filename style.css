@@ -34,6 +34,13 @@ body {
   padding: 2.5rem;
 
   display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark--1);
+}
+
+main {
+  display: flex;
+  flex: 1; 
 }
 
 /* GENERAL */
@@ -302,6 +309,22 @@ a:visited {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
 }
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+  color: var(--color-light--1);
+  background-color: var(--color-dark--1);
+  margin-top: 3rem;
+  border-top: 0.1rem solid var(--color-dark--1);
+}
+
+.footer__text {
+  margin: 0;
+  line-height: 1.5;
+}
+
 
 /* Tablet e sotto (max-width: 900px) */
 @media (max-width: 56.25em) {
